@@ -1,0 +1,47 @@
+- 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
+- git config --global http.proxy http[s]://login:password@172.172.174.5:3128 - если используется прокси на ПК
+- git init - для работы в git с директорией
+- git init . - создать директорию с БД git
+- .gitignore - файл в котором прописаны все игнорируемые файлы и директории
+- git config --global user.name "Igor Sidorov"
+- git config --global user.email "igor@yandex.ru"
+- git config -l  - информация о всех конфигурациях
+- git status
+- git add * - Изменения, которые необходимо зафиксировать(git add File2.txt)
+- git commit -m "My Initial commit, this is Version 1.0" - создать снимок директории(Copy in local Repository)
+- git log - все логи по изменениям
+- git log -2 -p - подробно по последним двум изменениям
+- git diff --staged - смотреть разницу, что было и стало перед последним зафиксированной(commit) версией
+- git checkout -- file2.txt - можно откатить до изменений файл пока он не зафиксирован(commit)
+
+- git clone https://github.com/OgremaR/test.git - копирует с git проект на ПК
+- git push origin - отправка на git локальной директории(Copy in Remote Repository)
+- git branch - показать имеющиеся ответвления
+- git branch fix_error - создание ответвления fix_error
+- git checkout -b igor_fixing_error - одновременно создание и переход на новое ответвление
+- git checkout fix_error - перейти в ответвление fix_error
+- git merge igor_fixing_error - выполняется из master! соединяет ответвление igor_fixing_error  с master
+- git branch -d igor_fixing_error - удаляет ответвление
+- git branch -D ... - удаление ответвления без соединения с master
+- git push --set-upstream origin igor_tasck12 - отправить ответвление на GitHub
+- git push origin --delete igor_tasck12 - удаление ответвления на GitHub
+
+- git checkout 42fe112... - откатиться на версию скопированного индекса commit
+- git reset --hard HEAD~2 - откатиться на две версии
+- git reset --soft  HEAD~3 - стереть на три версии с лог файла информацию о commit(остальные файлы при этом не трогая)
+- git commit --amend - изменить текст последний commit
+
+- git remote -v - смотреть ссылки на проект
+- git remote set-url origin https://... - сменить ссылку на проект
+- git remote rm origin - удаление ссылки к проекту
+- git remote add origin https://... - добавить ссылку на проект
+
+- git tag - просмотр имеющихся меток
+- git tag -l 'v1.4.2.*' - просмотр только выпусков 1.4.2
+- git tag -a v1.4 -m 'my version 1.4' - создание аннотированной метки в Git
+- git show v1.4 - данные метки вместе с коммитом
+- git tag -s v1.5 -m 'my signed 1.5 tag' - подписывать свои метки с помощью GPG
+- git push origin v1.5 - закинуть метку на gitHub
+- git log --pretty=oneline - лог Repository
+- git tag -d v.1.1.1 - удалить тэг на ПК
+- git push origin --delete v1.1.1 - удалить тэг на GitHub
